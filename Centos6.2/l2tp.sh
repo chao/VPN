@@ -41,7 +41,8 @@ fi
 
 	cd /var/tmp
 	version=2.6.37
-	wget http://www.openswan.org/download/openswan-${version}.tar.gz
+#	wget http://www.openswan.org/download/openswan-${version}.tar.gz
+	wget https://download.openswan.org/openswan/old/openswan-2.6/openswan-${version}.tar.gz
 	tar zxvf openswan-${version}.tar.gz
 	cd openswan-${version}
 	make USE_OBJDIR=true  programs install
@@ -61,7 +62,8 @@ function installXl2tpd() {
 	cd /var/tmp
 #	wget http://www.xelerance.com/wp-content/uploads/software/xl2tpd/xl2tpd-1.3.0.tar.gz
 	version=1.3.1
-	wget ftp://fsb.xelerance.com/xl2tpd/xl2tpd-$version.tar.gz
+#	wget ftp://fsb.xelerance.com/xl2tpd/xl2tpd-$version.tar.gz
+	wget https://download.openswan.org/xl2tpd/xl2tpd-$version.tar.gz
 	tar xvfz xl2tpd-$version.tar.gz
 	cd xl2tpd-$version
 	make all install
